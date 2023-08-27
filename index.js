@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import connectDb from "./Database/ConfigDb.js";
 import TeamModel from "./Model/TeamModel.js";
 import IndividualModel from "./Model/IndividualModel.js";
@@ -7,6 +8,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 connectDb()
   .then((res) => {
