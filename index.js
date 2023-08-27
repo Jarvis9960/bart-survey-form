@@ -22,7 +22,7 @@ app.post("/api/fillsurveryform", async (req, res) => {
   try {
     const role = req.body.role;
 
-    if (role === "Team") {
+    if (role === "team") {
       const {
         TeamName,
         NoOfTeamMembers,
